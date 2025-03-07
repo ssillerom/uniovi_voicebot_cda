@@ -23,7 +23,7 @@ Clone el repositorio e instale las dependencias en un entorno virtual:
 
 ```console
 # Linux/macOS
-cd voice-pipeline-agent-python
+cd uniovi_voicebot_cda
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
@@ -35,7 +35,7 @@ python3 agent.py download-files
   
 ```cmd
 # Windows (CMD/PowerShell)
-cd voice-pipeline-agent-python
+cd uniovi_voicebot_cda
 python3 -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
