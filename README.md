@@ -1,24 +1,25 @@
-<a href="https://livekit.io/">
-  <img src="./.github/assets/livekit-mark.png" alt="LiveKit logo" width="100" height="100">
-</a>
+<img src="https://web.gcompostela.org/wp-content/uploads/2019/02/University-of-Oviedo.png" alt="Uniovi logo">
 
-# Python Voice Agent
+# Agente de Voz en Python con capacidad de vision
 
-<p>
-  <a href="https://cloud.livekit.io/projects/p_/sandbox"><strong>Deploy a sandbox app</strong></a>
-  •
-  <a href="https://docs.livekit.io/agents/overview/">LiveKit Agents Docs</a>
-  •
-  <a href="https://livekit.io/cloud">LiveKit Cloud</a>
-  •
-  <a href="https://blog.livekit.io/">Blog</a>
-</p>
+> Práctica para la Universidad de Oviedo
 
-A basic example of a voice agent using LiveKit and Python.
+## Descripción
 
-## Dev Setup
+Este proyecto implementa un agente de voz utilizando LiveKit y Python. Permite la interacción por voz mediante una interfaz que procesa lenguaje natural y responde a comandos de voz.
 
-Clone the repository and install dependencies to a virtual environment:
+## Requisitos
+
+- Python 3.8 o superior
+- Claves API para:
+  - LiveKit
+  - OpenAI
+  - Elevenlabs
+  - Deepgram
+
+## Instalación
+
+Clone el repositorio e instale las dependencias en un entorno virtual:
 
 ```console
 # Linux/macOS
@@ -30,37 +31,38 @@ python3 agent.py download-files
 ```
 
 <details>
-  <summary>Windows instructions (click to expand)</summary>
+  <summary>Instrucciones para Windows</summary>
   
 ```cmd
-:: Windows (CMD/PowerShell)
+# Windows (CMD/PowerShell)
 cd voice-pipeline-agent-python
 python3 -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
+python3 agent.py download-files
 ```
 </details>
 
+## Configuración
 
-Set up the environment by copying `.env.example` to `.env.local` and filling in the required values:
+Copie el archivo `.env.example` a `.env.local` y complete los siguientes valores:
 
 - `LIVEKIT_URL`
 - `LIVEKIT_API_KEY`
 - `LIVEKIT_API_SECRET`
 - `OPENAI_API_KEY`
-- `CARTESIA_API_KEY`
+- `ELEVEN_API_KEY`
+- `ELEVENLABS_VOICE_ID`
 - `DEEPGRAM_API_KEY`
 
-You can also do this automatically using the LiveKit CLI:
+## Ejecución
 
-```console
-lk app env
-```
-
-Run the agent:
+Para ejecutar el agente:
 
 ```console
 python3 agent.py dev
 ```
 
-This agent requires a frontend application to communicate with. You can use one of our example frontends in [livekit-examples](https://github.com/livekit-examples/), create your own following one of our [client quickstarts](https://docs.livekit.io/realtime/quickstarts/), or test instantly against one of our hosted [Sandbox](https://cloud.livekit.io/projects/p_/sandbox) frontends.
+## Autores
+
+Desarrollado para la práctica de la Universidad de Oviedo.
